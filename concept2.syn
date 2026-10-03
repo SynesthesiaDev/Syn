@@ -1,0 +1,149 @@
+﻿import moe.syndev.package;
+package moe.syndev.concept.two;
+
+// let immutable, var mutable! 
+
+func Main(List<String> args) -> {
+    // 
+}
+
+func Test() -> String {
+    debug("testing string");
+    
+    
+    
+    return "hi";
+}
+
+
+NO FUCKING ASYNC!! ASYNC IN C# PISSES ME OFF!!
+JAVA ONE IS BETTER!! CompletableFuture for the win
+
+class TestClass<T>(let Int Number) {
+
+    // extra consturctors like this
+    constructor(Float number) -> this(number.ToInt());
+    
+    func Execute() -> String {
+        var output = Number == 5 ? "yes" : "no"
+        
+        
+    }
+}
+
+func reflectionMaybe(&TestClass class) -> {
+    class.members.each { item =>
+        
+    }
+    
+    let number = class.GetVariable<&Int>("Number")
+    
+    number.Get(); // gets the opriginal value
+    number.Set(5); // sets the original value of the variable, not the passed in one
+    
+    //ITS REFLECTION REFERNECE OT SOMETZINH OKAY
+}
+
+// ! signifies it can return error (result) instead of normal one .. maybe.. idk what to do about non nullable
+func ErrorsMaybe() -> !String{
+    if(sometzhing) {
+        Err("fuck"); //err just returns error, no need for "return" its kinda like throw
+    } 
+   
+    return "yippe";
+}
+
+// calls the error function but dont pass it
+func CallsErrorFunction() -> {
+    let reszult = ErorrsMaybe();
+    
+    // idk honestly what would be good way to do this I dont have creativity or havent look at other langauges. it should be painless witrhout crazy boilerplate
+    if(result. 
+}
+
+
+func OtherStuff() -> {  
+    var list = list("test", "2", "yoo");    
+    var map = map("key" to 123, "yaa" to 727);
+    
+    mutableList();
+    mutableMap();
+    
+    var thing = Project.Declared.<X>; // read from project.toml file. if I have defined "Version" in toml it should find and be okay with Project.Declared.Version in the language. Kinda like gradle does!. (Compile time?)
+    
+    #if(Program.IsMacOS) {
+        //mac os only bullshit
+    #}
+    
+    #if(Program.IsDev) {
+        // in dev environment
+    #}
+}
+
+func MayBeNull -> Int? {
+    let random = Random.Int(1, 5);
+    return random == 5 ? null : random; 
+}
+
+func CallsNullable() -> {   
+    let thing = MayBeNull() ?? 5;
+    WriteLine("very complciated way to get the number anyway.. its ${thing}")
+}
+
+func Fill() -> String {
+    var greeting string? = null;
+    greeting ??= "hello";
+    greeting ??= "ignored";
+    return greeting ?? "fallback";
+}
+
+struct, class, record, record struct, interface, abstract class, abstract record, abstract.. struct?
+
+
+//-----------------------------------------------------
+
+func GetUserAge(name: String) -> !Int? {
+    let user = FindUser(name)?          // ? propagates the error if there is error
+    
+    if (user.IsDeleted) {
+        return null
+    }
+    
+    return user.Age
+}
+
+func Main() -> {
+    // propagate, default on error/null
+    let age = GetUserAge("alice") ?? 0
+    WriteLine("age: ${age}")
+
+    // handle inline
+    let age2 = GetUserAge("bob") catch { err =>
+        Log("error: ${err}")
+        -1
+    }
+
+    // panic if anything goes wrong
+    let age3 = GetUserAge("dave")!!
+}
+
+func Unique() -> {
+    let list = list(1, 2, 3, 6, 6, 9);
+    let newList = mutableList();
+    
+    for(item in list) {
+        if(newList.Contains(item)) continue;
+        newList.Add(item);
+    }
+    
+    while (condition) {
+        if (something) break;
+        DoWork();
+    }
+    
+    do {
+        DoWork();
+    } while (condition);
+    
+    
+}
