@@ -1,3 +1,14 @@
 ﻿func Main() -> {
     Debug("yahoo");
 }
+
+// FuncDeclaration
+//   name: "Main"
+//   params: []
+//   returnType: Void
+//   body: Block
+//     statements:
+    //       - CallExpr
+//           callee: Variable("Debug")
+//           args:
+//             - StringLiteral("yahoo")
