@@ -18,6 +18,8 @@ public static class Symbols
             ']' => lexer.Single(TokenType.RightBrace),
             ',' => lexer.Single(TokenType.Comma),
             ';' => lexer.Single(TokenType.Semicolon),
+            '?' => lexer.Single(TokenType.QuestionMark),
+            '!' => lexer.Single(TokenType.Not),
             '-' => lexer.MatchIfNext('>', TokenType.Arrow, TokenType.Minus),
             '"' => lexer.ReadString(),
             _ =>  lexer.Single(TokenType.Unknown)

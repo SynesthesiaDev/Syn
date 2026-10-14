@@ -3,4 +3,4 @@
 
 namespace Syn.TreeWalker;
 
-public abstract record Statement;
+public abstract record Statement : IAstNode;

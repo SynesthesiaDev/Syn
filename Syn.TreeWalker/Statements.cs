@@ -3,5 +3,5 @@
 
 namespace Syn.TreeWalker;
 
-public record FuncDeclaration(string Name, List<Param> Params, TypeRef Type, Expression Body) : Statement;
+public record FuncDeclaration(string Name, List<Param> Params, TypeRef Type, Block Body) : Statement;
 

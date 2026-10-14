@@ -55,10 +55,15 @@ func ErrorsMaybe() -> !String{
 
 // calls the error function but dont pass it
 func CallsErrorFunction() -> {
-    let reszult = ErorrsMaybe();
+    let result = ErorrsMaybe();
     
     // idk honestly what would be good way to do this I dont have creativity or havent look at other langauges. it should be painless witrhout crazy boilerplate
-    if(result. 
+    if(result.HasError) {
+        Debug("errrorrrr");
+        return;
+    } 
+    
+    //continue with result
 }
 
 
@@ -102,7 +107,7 @@ struct, class, record, record struct, interface, abstract class, abstract record
 
 //-----------------------------------------------------
 
-func GetUserAge(name: String) -> !Int? {
+func GetUserAge(String name) -> !Int? {
     let user = FindUser(name)?          // ? propagates the error if there is error
     
     if (user.IsDeleted) {

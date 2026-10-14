@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Syn.Lexer\Syn.Lexer.csproj" />
+      <ProjectReference Include="..\Syn.Tooling\Syn.Tooling.csproj" />
     </ItemGroup>
 
 </Project>

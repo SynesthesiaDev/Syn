@@ -154,6 +154,4 @@ public class Lexer(string source, string file)
 
         return new Token(TokenType.String, sb.ToString(), startLine, startColumn, file);
     }
-
-
 }

@@ -3,7 +3,7 @@
 
 namespace Syn.TreeWalker;
 
-public abstract record Expression
+public abstract record Expression : IAstNode
 {
 
 }

@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Syn.Interpreter\Syn.Interpreter.csproj" />
       <ProjectReference Include="..\Syn.Lexer\Syn.Lexer.csproj" />
       <ProjectReference Include="..\Syn.TreeWalker\Syn.TreeWalker.csproj" />
     </ItemGroup>

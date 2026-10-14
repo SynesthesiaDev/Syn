@@ -4,9 +4,9 @@
 
 namespace Syn.Lexer.Lexing;
 
-public class Keywords
+public static class Keywords
 {
-    public static Dictionary<string, TokenType> Map = new()
+    public static readonly Dictionary<string, TokenType> MAP = new()
     {
         ["func"] = TokenType.Func,
         ["let"] = TokenType.Let,
@@ -34,6 +34,6 @@ public class Keywords
         ["in"] = TokenType.In,
     };
 
-    public static bool IsKeyword(string text) => Map.ContainsKey(text);
-    public static TokenType Lookup(string text) => Map.GetValueOrDefault(text, TokenType.Identifier);
+    public static bool IsKeyword(string text) => MAP.ContainsKey(text);
+    public static TokenType Lookup(string text) => MAP.GetValueOrDefault(text, TokenType.Identifier);
 }

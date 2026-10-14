@@ -18,7 +18,6 @@ public enum TokenType
     // Literals
     IntLiteral,
     FloatLiteral,
-    StringLiteral,
     CharLiteral,
     DoubleLiteral,
     LongLiteral,
@@ -92,6 +91,7 @@ public enum TokenType
     PipePipe,
     Catch,
     Not,
+    Errorable,
 
     // Loop keywords
     For,

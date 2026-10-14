@@ -3,17 +3,20 @@
 
 namespace Syn.TreeWalker;
 
-public record StringLiteral(string Value) : Expression;
+public record String(string Value) : Expression;
 
 public record Param(string Name, TypeRef Type) : Expression;
 
-public record Call(Expression Callee, List<Expression> Args) : Statement;
+public record Call(IAstNode Callee, List<IAstNode> Args, SourceLocation SourceLocation) : Statement;
 
-public record TypeRef(string Name, string FullPath, bool Nullable)
+public record TypeRef(string Name, bool Nullable, IReadOnlyList<TypeRef>? TypeArgs = null)
 {
-    public static readonly TypeRef VOID = new TypeRef("Void", "syn.core.Void", false);
+    public static readonly TypeRef VOID = new TypeRef("Void", false);
+
+    public static TypeRef Result(TypeRef inner) =>
+        new("Result", false, [inner]);
 }
 
-public record Block(List<Statement> Statements) : Expression;
+public record Block(List<IAstNode> Statements) : Expression;
 
 public record Variable(string Name) : Expression;

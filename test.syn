@@ -1,14 +1,13 @@
 ﻿func Main() -> {
-    Debug("yahoo");
+    Debug("aaaaaaaa");
+    Debug("Yippee");
+    Debug("I AM SO GOOD AT PROGRAMMING");
+    
+    //Test();
+    //let a = 1 + 2
 }
 
-// FuncDeclaration
-//   name: "Main"
-//   params: []
-//   returnType: Void
-//   body: Block
-//     statements:
-    //       - CallExpr
-//           callee: Variable("Debug")
-//           args:
-//             - StringLiteral("yahoo")
+
+//func Test() -> {
+//    Debug("ayo");
+//}
